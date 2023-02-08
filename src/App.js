@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
+
+import SignUp from "./components/SignUp";
+import SignIn from "./components/SignIn";
+import AccountPage from "./components/AccountPage";
+import {Route , Routes} from 'react-router-dom';
+import Home from "./components/Home";
+import CreateStegoMedia from "./components/CreateStegoMedia";
+import Footer from './components/Footer';
+import ExtractSecret from "./components/ExtractSecret";
+import Header from "./components/Header";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div >
+      
+     <Routes>
+    
+            <Route path='/' element={<SignIn/>}/>
+            <Route path='/home' element={<Home/>}/>
+            <Route path='/SignUp' element={<SignUp/>}/>
+            <Route path='/Account' element={<AccountPage/>}/>
+            <Route path='/createStegoMedia' element={<CreateStegoMedia/>}/>
+            <Route path='/extractSecret' element={<ExtractSecret/>}/>
+            
+      </Routes>
+     
     </div>
   );
 }
