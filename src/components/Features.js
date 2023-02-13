@@ -1,41 +1,41 @@
 import React from 'react';
 import { Link,  useNavigate  } from 'react-router-dom'
-// import features data
+
 import { featuresData } from '../data';
 
-// import icons
 import { BsArrowRight } from 'react-icons/bs';
 
 const Features = () => {
-  // destructure features data
+  
   const { title, subtitle, list } = featuresData;
   return (
-    <section className='my-[70px] xl:my-[150px]'>
+    <section className='my-[70px] xl:my-[150px] '>
       <div className='container mx-auto'>
+        
         {/* text */}
         <div className='text-center'>
           <h2
-            className='h2 mb-6 xl:mb-12'
+            className='h2 mb-6 xl:mb-12 '
             data-aos='fade-down'
             data-aos-delay='100'
           >
-            {title}
+            {}
           </h2>
-          <p
+          <p 
             className='lead max-w-[584px] mx-auto mb-16 xl:mb-24'
             data-aos='fade-down'
             data-aos-delay='200'
           >
-            {subtitle}
+            {}
           </p>
         </div>
         {/* feature list */}
         <div className='grid grid-cols-1 gap-[50px] xl:grid-cols-2'>
           {list.map((feature, index) => {
-            // destructure feature
+          
             const { image, bgImage, title, description, linkText, delay } =
               feature;
-            // feature item
+          
             return (
               <div
                 key={index}

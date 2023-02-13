@@ -10,6 +10,8 @@ import CreateStegoMedia from "./components/CreateStegoMedia";
 import Footer from './components/Footer';
 import ExtractSecret from "./components/ExtractSecret";
 import Header from "./components/Header";
+import Gallery from "./components/Gallery";
+import SecondGallery from "./components/SecondGallery";
 function App() {
   return (
     
@@ -17,13 +19,14 @@ function App() {
       
      <Routes>
     
-            <Route path='/' element={<SignIn/>}/>
+            <Route path='/' element={<SignIn visible />}/>
             <Route path='/home' element={<Home/>}/>
             <Route path='/SignUp' element={<SignUp/>}/>
             <Route path='/Account' element={<AccountPage/>}/>
             <Route path='/createStegoMedia' element={<CreateStegoMedia/>}/>
             <Route path='/extractSecret' element={<ExtractSecret/>}/>
-            
+            <Route path='/gallery' element={<Gallery/>}/>
+            <Route path='/secondgallery' element={<SecondGallery/>}/>
       </Routes>
      
     </div>

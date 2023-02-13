@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom'
 import {getAuth, signInWithPopup, GoogleAuthProvider} from "firebase/auth";
 
 import { async } from '@firebase/util';
+import SignIn from './SignIn'
 
 
 const Header = () => {
@@ -15,7 +16,10 @@ const Header = () => {
     
   return (
     //px-16 ---> because we need some spaces in the left side
-    <header className='w-screen fixed top-0  z-50 p-6 bg-slate-500 px-16'>
+    <div>
+
+    
+    <header className='w-screen fixed top-0  z-50 p-6 bg-indigo-900 px-16'>
         {/*for desktop & tables*/}
         <div className='hidden md:flex w-full h-full items-center justify-between'>
             <Link to={'/'}className='flex items-center gap-2'>
@@ -31,7 +35,7 @@ const Header = () => {
 
            <ul className='flex items-center gap-8 '>
                 <Link to='/' className='text-base text-headingColor cursor-pointer hover:text-headingColor duration-100 translate-all ease-in-out'>Home</Link>
-                <li className='text-base text-headingColor cursor-pointer hover:text-headingColor duration-100 translate-all ease-in-out'>Gallery</li>
+                <Link to='/gallery' className='text-base text-headingColor cursor-pointer hover:text-headingColor duration-100 translate-all ease-in-out'>Gallery</Link>
                 <li  className='text-base text-headingColor cursor-pointer hover:text-headingColor duration-100 translate-all ease-in-out'>About Us</li>
                 <li className='text-base text-headingColor cursor-pointer hover:text-headingColor duration-100 translate-all ease-in-out'>service</li>
             </ul>
@@ -39,12 +43,15 @@ const Header = () => {
 
 
             <div className='relative'>
+              <Link to="/">
             <motion.img 
             whileTap={{scale: 0.6}} 
-            src={user_pic} className='w-10 min-w-[40px] h-10 min-h-[40px] cursor-pointer' alt="userProfile" />
+            src={user_pic} className=' imageLink w-10 min-w-[40px] h-10 min-h-[40px] cursor-pointer' alt="userProfile"  />
+            </Link>
             </div>
 
            </div>
+            
         </div>
 
 
@@ -57,6 +64,8 @@ const Header = () => {
         </div>
 
     </header>
+    
+    </div>
   )
 }
 

@@ -2,40 +2,41 @@ import React , {useState, useEffect} from 'react'
 import { Link, useHistory,useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
-const SignIn = () => {
-
+const SignIn = ({visible}) => {
   const [state , setState]=useState(
     {
       email: "",
       password: "",
     }
-  );
-  const handleSubmit=()=>{};
-  const handleGoogleSignIn=()=>{};
-  const handleFacebookSignIn=()=>{};
-  const handleChange=()=>{};
-  const {email, password}=state;
- 
-
+    );
+    const handleSubmit=()=>{};
+    const handleGoogleSignIn=()=>{};
+    const handleFacebookSignIn=()=>{};
+    const handleChange=()=>{};
+    const {email, password}=state;
+    
+    
   const navigate = useNavigate();
   const navigateHome = () => {
     
     navigate('/home');
   };
-
+  
+  if(!visible) return null;
   return (
 
-  <div className='flex w-full h-screen'>
-    
-    <div className="bg-gray-50 w-full flex items-center justify-center   lg:w-1/2">
+  
+    <div>
+    <div className='fixed inset-0 bg-black bg-opacity-30 '>
 
     
-    <div className="bg-white w-1/2  rounded-2xl shadow-lg px-10 py-20 p-5 items-center   ">
+    <div className="flex justify-center items-center h-screen fixed inset-0 bg-black bg-opacity-30  ">
        
     <div >
-     <h2 class="font-bold text-2xl text-[#002D74]">Login</h2>
+     
     <div >
-    <form  onSubmit={handleSubmit} className='mt-8'>
+    <form  onSubmit={handleSubmit} className='mt-8  rounded-2xl  bg-white  w-96 px-14 py-20 z-10 '>
+    <h2 class="font-bold text-2xl text-[#002D74] mb-5">Login</h2>
       <div >
           
           <input className="w-full border-gray-100  rounded-xl p-4 mt-1 bg-transparent  border-2  "
@@ -102,14 +103,14 @@ const SignIn = () => {
   </div>
   </div>
   </div>
+  
 
 
-
-
+ {/* whenClicked is a property not an event, per se. 
   <div className='hidden lg:flex h-full w-1/2 items-center justify-center  bg-gray-200'>
     <div className='w-60 h-60 bg-gradient-to-tr from-violet-500 to-pink-500 rounded-full'/>
   </div>
-
+*/}
 
 
   </div>
