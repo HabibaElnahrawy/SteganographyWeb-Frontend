@@ -23,7 +23,7 @@ const SecondGallery = () => {
         <div className='container mx-auto'>
             <div>
             <h2 className='h2 text-8xl text-black font-bold '> My Gallery <br/> all the media</h2>
-                            <p className='max-w-sm mb-16 text-2xl'>hfbvkjfsnv jnsljdvkldnvm,sdnvjklsndv jnkldm cvjkndsklmf klnsdflksd klskdmcsdlc kjndflcnm </p>
+                            <p className='max-w-sm mb-16 text-2xl'> </p>
                           
             </div>
             <div className='grid grid-cols-1 gap-[50px] xl:grid-cols-3'>

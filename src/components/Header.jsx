@@ -9,6 +9,7 @@ import {getAuth, signInWithPopup, GoogleAuthProvider} from "firebase/auth";
 
 import { async } from '@firebase/util';
 import SignIn from './SignIn'
+import Features from './Features'
 
 
 const Header = () => {
@@ -36,8 +37,8 @@ const Header = () => {
            <ul className='flex items-center gap-8 '>
                 <Link to='/' className='text-base text-headingColor cursor-pointer hover:text-headingColor duration-100 translate-all ease-in-out'>Home</Link>
                 <Link to='/secondgallery' className='text-base text-headingColor cursor-pointer hover:text-headingColor duration-100 translate-all ease-in-out'>Gallery</Link>
-                <li  className='text-base text-headingColor cursor-pointer hover:text-headingColor duration-100 translate-all ease-in-out'>About Us</li>
-                <li className='text-base text-headingColor cursor-pointer hover:text-headingColor duration-100 translate-all ease-in-out'>service</li>
+                <Link to='/' className='text-base text-headingColor cursor-pointer hover:text-headingColor duration-100 translate-all ease-in-out'>Logout</Link>
+             
             </ul>
             
 

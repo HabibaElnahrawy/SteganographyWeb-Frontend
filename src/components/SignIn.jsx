@@ -78,7 +78,7 @@ const handleLogin=()=>{
           
           <input className="w-full border-gray-100  rounded-xl p-4 mt-1 bg-transparent  border-2  "
           
-          name="email" placeholder="Email" 
+          name="email" placeholder="Username" 
           //onChange={handleChange} 
           required
           defaultValue={email}
