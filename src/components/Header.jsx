@@ -19,7 +19,7 @@ const Header = () => {
     <div>
 
     
-    <header className='w-screen fixed top-0  z-50 p-6 bg-indigo-900 px-16'>
+    <header className='w-screen fixed top-0  z-50 p-6 bg-slate-200 px-16'>
         {/*for desktop & tables*/}
         <div className='hidden md:flex w-full h-full items-center justify-between'>
             <Link to={'/'}className='flex items-center gap-2'>
@@ -35,7 +35,7 @@ const Header = () => {
 
            <ul className='flex items-center gap-8 '>
                 <Link to='/' className='text-base text-headingColor cursor-pointer hover:text-headingColor duration-100 translate-all ease-in-out'>Home</Link>
-                <Link to='/gallery' className='text-base text-headingColor cursor-pointer hover:text-headingColor duration-100 translate-all ease-in-out'>Gallery</Link>
+                <Link to='/secondgallery' className='text-base text-headingColor cursor-pointer hover:text-headingColor duration-100 translate-all ease-in-out'>Gallery</Link>
                 <li  className='text-base text-headingColor cursor-pointer hover:text-headingColor duration-100 translate-all ease-in-out'>About Us</li>
                 <li className='text-base text-headingColor cursor-pointer hover:text-headingColor duration-100 translate-all ease-in-out'>service</li>
             </ul>

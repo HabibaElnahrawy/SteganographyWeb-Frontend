@@ -1,6 +1,8 @@
 import React , {useState, useEffect} from 'react'
 import { Link, useHistory,useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
+import axios from 'axios';
+
 
 const SignIn = ({visible}) => {
   const [state , setState]=useState(
@@ -9,11 +11,17 @@ const SignIn = ({visible}) => {
       password: "",
     }
     );
+
+    const [name,setName]=useState('');
+    const [pass,setPass]=useState('');
+
+
     const handleSubmit=()=>{};
     const handleGoogleSignIn=()=>{};
     const handleFacebookSignIn=()=>{};
     const handleChange=()=>{};
     const {email, password}=state;
+    
     
     
   const navigate = useNavigate();
@@ -23,6 +31,35 @@ const SignIn = ({visible}) => {
   };
   
   if(!visible) return null;
+
+///////////////////////////////////////
+
+
+
+const handleNameChange=(value) =>{
+  setName(value);
+};
+const handlePasswordChange=(value) =>{
+  setPass(value);
+};
+
+const handleLogin=()=>{ 
+  const data ={
+    Name:name,
+    PhoneNo:pass
+  };
+ const url='https://localhost:44392/api/Test/Login';
+  axios.post(url,data).then((result)=>{
+    if(result.data=='Data inserted ')
+    alert('data saved');
+    else 
+    alert(result.data);
+
+  }).catch((error)=>{
+      alert(error);
+  })
+};
+
   return (
 
   
@@ -35,16 +72,17 @@ const SignIn = ({visible}) => {
     <div >
      
     <div >
-    <form  onSubmit={handleSubmit} className='mt-8  rounded-2xl  bg-white  w-96 px-14 py-20 z-10 '>
+    <form  onSubmit={navigateHome} className='mt-8  rounded-2xl  bg-white  w-96 px-14 py-20 z-10 '>
     <h2 class="font-bold text-2xl text-[#002D74] mb-5">Login</h2>
       <div >
           
           <input className="w-full border-gray-100  rounded-xl p-4 mt-1 bg-transparent  border-2  "
-          type="email" 
+          
           name="email" placeholder="Email" 
-          onChange={handleChange} 
+          //onChange={handleChange} 
           required
           defaultValue={email}
+          onChange={(e)=> handleNameChange(e.target.value)}
           />
       </div>
       <div className='relative'>
@@ -52,9 +90,10 @@ const SignIn = ({visible}) => {
           type="password" 
           name="password" 
           placeholder="Password"
-          onChange={handleChange} 
+          //onChange={handleChange} 
           required
           defaultValue={password}
+          onChange={(e)=> handlePasswordChange(e.target.value)}
           /> 
          
       </div>
@@ -70,7 +109,7 @@ const SignIn = ({visible}) => {
       </div>
 
       <div className='mt-8 flex flex-col gap-y-4'>
-      <button  onClick={navigateHome} className="bg-[#002D74] rounded-xl text-white py-2 hover:scale-105 duration-300">Login
+      <button  onClick={()=> handleLogin()} className="bg-[#002D74] rounded-xl text-white py-2 hover:scale-105 duration-300">Login
       </button>
       <div class="mt-6 grid grid-cols-3 items-center text-gray-400">
         <hr class="border-gray-400"/>

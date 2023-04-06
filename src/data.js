@@ -56,7 +56,7 @@ export const featuresData = {
         'rgetgrdtbgbdgbdgbdgbdfbd',
       linkText: 'Get started',
       delay: '1000',
-      href: '/secondgallery',
+      href: '/',
     },
     {
       image: Feature4Img,
@@ -66,7 +66,7 @@ export const featuresData = {
         'el user y2dar yshof kol el stego media w el hagat el 3amlha abl keda ',
       linkText: 'Learn more',
       delay: '1300',
-      href: '/gallery',
+      href: '/secondgallery',
     },
   ],
 };
@@ -80,15 +80,14 @@ export const GalleryData = {
       bgImage: Feature4BgImg,
       title: 'Media1 ',
       
-      delay: '400',
-      href: '/createStegoMedia',
+    
     },
     {
       image: Feature2Img,
       bgImage: Feature4BgImg,
       title: 'Media2 ',
      
-      delay: '700',
+      delay: '0',
       href: '/extractSecret',
     },
     {
@@ -96,7 +95,7 @@ export const GalleryData = {
       bgImage: Feature4BgImg,
       title: 'Media3 ',
      
-      delay: '700',
+      delay: '0',
       href: '/extractSecret',
     },
     {
@@ -104,7 +103,7 @@ export const GalleryData = {
       bgImage: Feature4BgImg,
       title: 'Media4 ',
      
-      delay: '700',
+      delay: '0',
       href: '/extractSecret',
     },
     {
@@ -112,7 +111,7 @@ export const GalleryData = {
       bgImage: Feature4BgImg,
       title: 'Media5 ',
      
-      delay: '700',
+      delay: '0',
       href: '/extractSecret',
     },
     {
@@ -120,8 +119,8 @@ export const GalleryData = {
       bgImage: Feature4BgImg,
       title: 'Media6',
      
-      delay: '1000',
-      href: '/',
+      delay: '0',
+      href: '/extractSecret',
     },
     {
       image: Feature4Img,
@@ -129,8 +128,8 @@ export const GalleryData = {
       title: 'Media7',
      
    
-      delay: '1300',
-      href: '/gallery',
+      delay: '0',
+      href: '/extractSecret',
     },
   ],
 };
@@ -141,39 +140,27 @@ export const footerData = {
   email: 'info@gmail.com',
   phone: '12345688',
   list1: [
-    {
-      name: 'Profile',
-      href: '/',
-    },
-    {
-      name: 'Features',
-      href: '/home',
-    },
+   
+   
     {
       name: 'Gallery',
-      href: '#',
+      href: '/secondgallery',
     },
     {
-      name: 'balah',
-      href: '#',
+      name: 'Login',
+      href: '/',
     },
   ],
   list2: [
-    {
-      name: 'Support',
-      href: '#',
-    },
+   
     {
       name: 'Sign Up',
       href: '/SignUp',
     },
-    {
-      name: 'Guide',
-      href: '#',
-    },
+   
     {
       name: 'Q & A',
-      href: '#',
+      href: '/gallery',
     },
   ],
   socialList: [
