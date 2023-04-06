@@ -37,18 +37,18 @@ const Home = () => {
     
         <div>
            <Header/>
-         <div className="flex flex-row justify-between items-center w-full ">
+         <div className="ml-10 flex flex-row justify-between items-center w-full ">
           <h1 className="mr-4 flex-1 font-poppins  ss:text-[72px] text-[52px] text-black ss:leading-[100.8px] leading-[75px] mt-48 ml-9 font-bold ">
           Multimedia  <br className="sm:block hidden" />{" "}
             <span className="text-gradient ">Steganography</span>{" "}
           </h1>
           
         </div>
-        
-        <p className='max-w-[470px] mt-5  ml-9 font-serif pb-96 text-[20px] '>
+        <div className='ml-10 '>
+        <p className='max-w-[500px] mt-10  ml-9 font-serif pb-20 text-[20px] '>
         Website that Applies Multimedia Steganography Algorithms to generate steganographic output on all types of media, with high quality, reasonable capacity and high security for communication.
         </p>
-
+        </div>
         <img src={robot} alt="" className=" absolute w-[578px] h-[571px]   inset-y-0 right-0 top-[73px] mt-6" />
        
 

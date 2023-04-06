@@ -25,7 +25,7 @@ const Header = () => {
         <div className='hidden md:flex w-full h-full items-center justify-between'>
             <Link to={'/'}className='flex items-center gap-2'>
                 <motion.img  whileTap={{scale: 0.6}}  src={Logo} className='w-8 object-cover' alt="logo"/>
-                <p className='text-headingColor text-xl font bold'> Name</p>
+                <p className='text-headingColor text-xl font bold'> Steganography</p>
             </Link>
             
 
