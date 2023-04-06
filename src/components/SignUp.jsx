@@ -65,12 +65,11 @@ navigate('/home');*/
   };
 
  const handleSave=()=>{ 
-      const data ={
-        Name :name,
-        PhoneNo:pass,
-        Address:emailAddress,
-        IsActive:1
-      };
+     const data = {
+         Name: name,
+         Password: pass,
+         Email: emailAddress
+     };
      const url='https://localhost:44392/api/Test/Registration';
       axios.post(url,data).then((result)=>{
         if(result.data=='Data inserted ')
