@@ -50,15 +50,7 @@ const Home = () => {
        
 
 
-     <div className='flex'>
-      <AliceCarousel autoPlay autoPlayInterval="3000">
-      <p><img src= "{image1}" /></p>
-      <p><img src= "{image1}" /></p>
-      <p><img src= "{image2}" /></p>
-      <p><img src= "{image3}" /></p>
-      <p><img src= "{image4}" /></p>
-      </AliceCarousel>   
-      </div>
+    
 
 
           <Features />
