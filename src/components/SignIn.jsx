@@ -44,10 +44,10 @@ const handlePasswordChange=(value) =>{
 };
 
 const handleLogin=()=>{ 
-  const data ={
-    Name:name,
-    PhoneNo:pass
-  };
+    const data = {
+        Name: name,
+        Password: pass
+    };
  const url='https://localhost:44392/api/Test/Login';
   axios.post(url,data).then((result)=>{
     if(result.data=='Data inserted ')
