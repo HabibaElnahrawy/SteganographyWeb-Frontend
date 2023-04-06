@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { MediaConfig } from '../MediaConfig'; 
 import React, { useRef, useState } from 'react';
 import { Form, FormGroup } from "reactstrap";
-
+import Header from './Header';
 const ExtractSecret = props => {
     const wrapperRef = useRef(null);
 
@@ -40,6 +40,8 @@ const ExtractSecret = props => {
       );
     const {typeCoverMedia, typeOutputMedia,typeSecretMedia}=state;
   return (
+    <div>
+        <Header/>
     <div className='w-full text-white my-24'>
         
         <div className='w-full h-[800px]  absolute mix-blend-overlay'></div>
@@ -138,7 +140,7 @@ const ExtractSecret = props => {
   </div>
 
     </div>
-    
+    </div>
   )
 }
 ExtractSecret.propTypes = {

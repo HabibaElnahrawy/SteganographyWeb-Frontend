@@ -33,7 +33,7 @@ export const featuresData = {
       bgImage: Feature4BgImg,
       title: 'Create Stego media ',
       description:
-        'beyda5al el cover w el secret media w ytala3 output el howa el stego media w y2dar y3ml download',
+      'Input the cover media and secret media to output stego media',
       linkText: 'Get started',
       delay: '400',
       href: '/createStegoMedia',
@@ -43,7 +43,7 @@ export const featuresData = {
       bgImage: Feature4BgImg,
       title: 'Extract secret ',
       description:
-        'el user beyda5al stego media w beytala3 cover w secret media w y2dar y3ml download ',
+      'Input stego media to output cover media and secret media ',
       linkText: 'Get started',
       delay: '700',
       href: '/extractSecret',
@@ -53,7 +53,7 @@ export const featuresData = {
       bgImage: Feature4BgImg,
       title: 'Account',
       description:
-        'rgetgrdtbgbdgbdgbdgbdfbd',
+      'To login to your account or create an account',
       linkText: 'Get started',
       delay: '1000',
       href: '/',
@@ -63,7 +63,7 @@ export const featuresData = {
       bgImage: Feature4BgImg,
       title: 'Gallery',
       description:
-        'el user y2dar yshof kol el stego media w el hagat el 3amlha abl keda ',
+      'Gallery of input and output of previous cover media, secret media and stego media  ',
       linkText: 'Learn more',
       delay: '1300',
       href: '/secondgallery',

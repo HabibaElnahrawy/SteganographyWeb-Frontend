@@ -2,6 +2,7 @@
 import PropTypes from 'prop-types';
 import { MediaConfig } from '../MediaConfig'; 
 import React, { useRef, useState } from 'react';
+import Header from './Header';
 
 
 const CreateStegoMedia = props => {
@@ -31,6 +32,8 @@ const CreateStegoMedia = props => {
         props.onFileChange(updatedList);
     }
   return (
+    <div>
+        <Header/>
     <div className='w-full text-white my-24'>
         <div className='w-full h-[800px]  absolute mix-blend-overlay'></div>
 
@@ -99,7 +102,7 @@ const CreateStegoMedia = props => {
 </button>
   </div>
     </div>
-    
+    </div>
   )
 }
 CreateStegoMedia.propTypes = {
